@@ -47,12 +47,7 @@ genai.configure(api_key=GEMINI_API_KEY)
 
 # =====================================================================
 # 3. APPLICATION UI
-# =====================================================================
-st.markdown("<div class='main-title'>🚀 Innovation AI</div>", unsafe_allow_html=True)
-st.markdown("<div class='subtitle'>Turn your app ideas into fully working Web & Mobile applications instantly—No Code Needed!</div>", unsafe_allow_html=True)
-
-st.divider()
-
+# =====================================================================                                
 # User Input Form
 with st.form(key="app_generator_form"):
     app_idea = st.text_area(
@@ -69,6 +64,11 @@ with st.form(key="app_generator_form"):
     design_style = st.selectbox(
         "Design Theme & Style:",
         ["Modern Minimalist", "Dark Mode Tech", "Vibrant & Playful", "Professional Corporate"]
+    )
+    
+    #
+    submit_button = st.form_submit_button(label="Generate Complete Application")
+    
     )
     
     submit_button = st.form_submit_with_button_label(label="Generate Complete Application")
